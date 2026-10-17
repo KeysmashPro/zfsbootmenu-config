@@ -1,0 +1,18 @@
+Global:
+  ManageImages: true
+  BootMountPoint: /boot/efi
+  DracutConfDir: /etc/zfsbootmenu/dracut.conf.d
+  PreHooksDir: /etc/zfsbootmenu/generate-zbm.pre.d
+  PostHooksDir: /etc/zfsbootmenu/generate-zbm.post.d
+Components:
+  ImageDir: /boot/efi/EFI/zbm
+  Versions: 3
+  Enabled: false
+EFI:
+  ImageDir: /boot/efi/EFI/zbm
+  Versions: false
+  Enabled: true
+  SplashImage: /etc/zfsbootmenu/splash.bmp
+Kernel:
+  CommandLine: ro quiet loglevel=0 efi_max_resolution="1920x1080" video=efifb:1920x1080 gfxpayload=1920x1080 video=card0-DP-1:1920x1080@60e rd.vconsole.font=ter-v18b nomodeset zbm.timeout=1024 spl_hostid=0x00bab10c
+
